@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Banner版面切版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <style>
+        *{
+            margin: 0;padding: 0;list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .banner{
+            width: 100%;
+            max-width: 1400px;
+            min-width: 1024px;
+            /* height: 100vh; */
+            height: 400px;
+            /* background-color: #ccc; */
+            background: 
+                linear-gradient(115deg, #7bf 50%, transparent 50%) center center / 100% 100%,
+                url("https://picsum.photos/1200/600?random=10") right center / auto 100%;
+            margin: auto;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+        .banner-txt{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .banner-txt h1{
+            font-size: 80px;
+            border-bottom: 1px solid #333;
+            font-weight: 900;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.3em;
+        }
+        .banner-txt h1 small{
+            display: block;
+            font-size: 53px;
+            font-weight: 800;
+        }
+        .banner-txt h2{
+            font-size: 50px;
+            font-weight: 500;
+        }
+        .banner-txt p{
+            font-size: 20px;
+            font-weight: 300;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt">
+                <h1>
+                    金魚都能懂的
+                    <small>這個網頁畫面怎麼切</small>
+                </h1>
+                <h2>圖文滿版區塊</h2>
+                <p>
+                    這畫面實在常見，在各種樣版網站可說是設計常客
+                    <br>
+                    金魚切不出來時在說不過去阿
+                </p>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
