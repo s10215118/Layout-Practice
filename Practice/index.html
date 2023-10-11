@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XX電腦 -我們的用心 您用的安心-</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* Header */
+        .header{
+            display: flex;
+            width: 100%;
+            height: 40px;
+            margin: auto;
+            background-color: #202020;
+        }
+        .header img{
+            height: 100%;
+        }
+        .btns{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            text-align: center;
+            font-size: 0;
+        }
+        .btns nav{
+            display: flex;
+            align-items: stretch;
+        }
+        .btns a{
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 40px;
+            color: #000;
+            background-color: #fa0;
+            padding: 0 10px;
+            margin: 0 0 0 2px;
+            transition: all .4s ease;
+        }
+        .btns a:hover{
+            color: #fa0;
+            background-color: #000;
+        }
+        img{
+            vertical-align: bottom;
+        }
+
+        /* Banner */
+        .banner{
+            width: 100%;
+            height: 500px;
+            background: 
+                linear-gradient(115deg, #fa0 50%, transparent 50%) center center / 100% 100%,
+                url('https://picsum.photos/1400/500/?random=11') right center / auto 100%;
+        }
+        .banner .txt{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .banner h2{
+            font-size: 64px;
+            font-weight: 700;
+        }
+        .banner h2 small{
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .banner h2::after{
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #333;
+            margin: 5px 0 10px;
+        }
+        .banner p{
+            text-align: left;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .game{
+            background-color: #d27171;
+        }
+        .create{
+            background-color: #d1a30c;
+        }
+        .commerce{
+            background-color: #569dd1;
+        }
+        .product{
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%-80px;
+            padding: 40px;
+        }
+        .product .item{
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .product .item img{
+            width: 32.5%;
+        }
+        .product .txt{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .product .txt h2{
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .product .txt h2::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+        .product .txt p{
+            width: 12em;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        /* New */
+        .new{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: stretch;
+            background-color: #9848c6;
+        }
+        .new .item{
+            width: 70%;
+            text-align: center;
+            margin: 0 0 0 40px;
+        }
+        .new .item img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+        .new .txt{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin: 0 40px 0 0;
+            color: #fff;
+        }
+        .new .txt h2{
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .new .txt h2:after{
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #fff;
+            margin: 10px 0;
+        }
+        .new .txt p{
+            width: 12em;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        /* On Sales */
+        .on-sales{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%-80px;
+            padding: 40px;
+            background-color: #61ad45;
+        }
+        .on-sales .txt{
+            text-align: center;
+            margin: 0 0 20px;
+            color: #fff;
+            padding: 10px 60px;
+        }
+        .on-sales .txt h2{
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .on-sales .txt h2:after{
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+        .on-sales .txt p{
+            font-size: 24px;
+            font-weight: 300;
+        }
+        .on-sales .pic{
+            display: flex;
+            justify-content: space-between;
+        }
+        .on-sales .pic img{
+            width: 24.5%;
+            box-sizing: border-box;
+        }
+
+        .footer{
+            background-color: #202020;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div class="header">
+        <div class="pic">
+            <img src="https://picsum.photos/320/60/?random=10">
+        </div>
+        <div class="btns">
+            <nav>
+                <a href="#">關於我們</a>
+                <a href="#">購物車</a>
+                <a href="#">產品</a>
+                <a href="#">服務</a>
+                <a href="#">聯絡資訊</a>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Banner -->
+    <div class="banner">
+        <div class="txt">
+            <h2>
+                XX電腦
+                <small>
+                    我們的用心 您用得安心
+                </small>
+            </h2>
+            <p>從19XX年開始，XX電腦一直<br>致力於發展穩定的先端技術，<br>為客戶提供最優質的服務。</p>
+        </div>
+    </div>
+    
+    <!-- New Product -->
+    <div class="new">
+        <div class="item">
+            <img src="https://picsum.photos/900/700/?random=12">
+        </div>
+        <div class="txt">
+            <h2>新品上市</h2>
+            <p>最新的技術所打造出來的完美逸品，讓您享受科技的同時，也能走在時尚最尖端。</p>
+        </div>
+    </div>
+    
+    <!-- On Sales -->
+    <div class="on-sales">
+        <div class="txt">
+            <h2>特價優惠</h2>
+            <p>最划算的價格 最優質的電腦</p>
+        </div>
+        <div class="pic">
+            <img src="https://picsum.photos/300/200/?random=13">
+            <img src="https://picsum.photos/300/200/?random=14">
+            <img src="https://picsum.photos/300/200/?random=15">
+            <img src="https://picsum.photos/300/200/?random=16">
+        </div>
+    </div>
+    
+    <!-- Game Series -->
+    <div class="product game">
+        <div class="txt">
+            <h2>電競-奢華享受</h2>
+            <p>高級酷炫的電腦，讓您享受極致的遊玩體驗，以獨特的技術讓您在遊戲世界中自由穿梭。</p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/200/?random=17">
+            <img src="https://picsum.photos/300/200/?random=18">
+            <img src="https://picsum.photos/300/200/?random=19">
+        </div>
+    </div>
+    
+    <!-- Create Series -->
+    <div class="product create">
+        <div class="txt">
+            <h2>創作-輕巧靈敏</h2>
+            <p>我們有數款適合創作者的筆電，讓您不論在何時何地，都能隨時輕鬆創作。</p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/200/?random=20">
+            <img src="https://picsum.photos/300/200/?random=21">
+            <img src="https://picsum.photos/300/200/?random=22">
+        </div>
+    </div>
+    
+    <!-- Commerce Series -->
+    <div class="product commerce">
+        <div class="txt">
+            <h2>商務-沉穩陪伴</h2>
+            <p>您的最佳商務夥伴，非我們這幾款電腦莫屬，讓您能夠在工作時，迅速穩定切換不同軟體。</p>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/200/?random=23">
+            <img src="https://picsum.photos/300/200/?random=24">
+            <img src="https://picsum.photos/300/200/?random=25">
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        &copy; Copyright 2023 Michael Hsieh. All rights reserved.
+    </div>
+    
+</body>
+</html>
